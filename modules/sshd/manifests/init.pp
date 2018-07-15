@@ -1,6 +1,6 @@
 class sshd {
 	package {
-		"sshd": ensure => installed;
+		"ssd": ensure => installed;
 	}
 
 	file { "/etc/ssh/sshd_config":
@@ -8,7 +8,7 @@ class sshd {
 		mode    => 600,
 		owner   => root,
 		group   => root,
-		require => Package["sshd"],
+		require => Package["ssh"],
 		source  => "puppet:///modules/sshd/sshd.config",
 	}
 
@@ -22,10 +22,10 @@ class sshd {
 		# "service smartd restart" can restart service
 		hasrestart => true,
 		# package and configuration must be present for service
-		require    => [ Package["sshd"],
+		require    => [ Package["ssh"],
 			        File["/etc/ssh/sshd_config"] ],
 		# changes to configuration cause service restart
-		subscribe  => [ Package["sshd"], 
+		subscribe  => [ Package["ssh"], 
                     File["/etc/ssh/sshd_config"] ],
 	    }
 }
