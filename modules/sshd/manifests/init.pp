@@ -1,6 +1,6 @@
 class sshd {
 	package {
-		"ssd": ensure => installed;
+		"ssh": ensure => installed;
 	}
 
 	file { "/etc/ssh/sshd_config":
