@@ -4,15 +4,12 @@ class sshd {
 	}
 
 	file { "/etc/ssh/sshd_config":
-		source  => [
-			# from modules/smartd/files/sshd.conf
-			"puppet:///modules/sshd/sshd.conf",
-		],
-		mode    => 444,
+        ensure  => present,
+		mode    => 600,
 		owner   => root,
 		group   => root,
-		# package must be installed before configuration file
 		require => Package["sshd"],
+		source  => "puppet:///modules/sshd/sshd.config",
 	}
 
 	service { "sshd":
