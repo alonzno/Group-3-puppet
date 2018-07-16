@@ -5,7 +5,7 @@ class sshd {
 
 	file { "/etc/ssh/sshd_config":
         ensure  => present,
-		mode    => 600,
+		mode    => 644,
 		owner   => root,
 		group   => root,
 		require => Package["ssh"],
