@@ -10,7 +10,6 @@ node ip-10-0-5-58 {
 
 node ip-10-0-5-189 {
     include sshd
-    include apache2
 
     cron { "puppet update":
             command => "cd /etc/puppet && git pull -q origin master",
