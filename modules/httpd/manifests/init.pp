@@ -2,7 +2,6 @@ class httpd {
     
     package { 'httpd': 
         ensure => installed,
-        ensure=> present,
     }
 
     service { 'httpd':
