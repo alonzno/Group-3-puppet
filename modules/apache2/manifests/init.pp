@@ -14,14 +14,15 @@ class apache2 {
         source => "puppet:///modules/apache2/apache2.conf",
     }
 
-    file {"/var/www/html/foo.html": 
-        ensure => present,
+    file {"/var/www/html/": 
+        ensure => directory,
+        recurse => true,
         mode => 644,
         owner => root,
         group => root,
 
         require => Package["apache2"],
-        source => "puppet:///modules/apache2/foo.html",
+        source => "puppet:///modules/apache2/public_html",
     }
 
     service { 'apache2':
