@@ -1,5 +1,12 @@
 class sysusers {
-         user { 'dbeeman':
+
+        group { 'sysadmin':
+            ensure => 'present',
+            gid => '5000',
+        }
+
+
+       user { 'dbeeman':
  			  ensure           => 'present',
        gid              => '500',
        home             => '/home/dbeeman',
@@ -8,6 +15,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '500',
+       groups           => 'sysadmin',
      }
      user { 'jbeder1':
  			  ensure           => 'present',
@@ -18,6 +26,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '501',
+       groups           => 'sysadmin',
      }
      user { 'mhagel2':
  			  ensure           => 'present',
@@ -28,6 +37,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '502',
+       groups           => 'sysadmin',
      }
      user { 'ashears':
  			  ensure           => 'present',
@@ -38,6 +48,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '503',
+       groups           => 'sysadmin',
      }
      user { 'alegge':
  			  ensure           => 'present',
@@ -48,6 +59,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '504',
+       groups           => 'sysadmin',
      }
      user { 'alajaji':
  			  ensure           => 'present',
@@ -58,6 +70,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '505',
+       groups           => 'sysadmin',
      }
      user { 'injoker':
  			  ensure           => 'present',
@@ -68,6 +81,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '506',
+       groups           => 'sysadmin',
      }
      user { 'mantail':
  			  ensure           => 'present',
@@ -78,6 +92,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '507',
+       groups           => 'sysadmin',
      }
      user { 'vohoanvu':
  			  ensure           => 'present',
@@ -88,6 +103,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '508',
+       groups           => 'sysadmin',
      }
      user { 'Nosler':
  			  ensure           => 'present',
@@ -98,6 +114,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '509',
+       groups           => 'sysadmin',
      }
      user { 'aarcher':
  			  ensure           => 'present',
@@ -108,6 +125,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '510',
+       groups           => 'sysadmin',
      }
      user { 'crestonw':
  			  ensure           => 'present',
@@ -118,6 +136,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '511',
+       groups           => 'sysadmin',
      }
      user { 'quinnmil':
  			  ensure           => 'present',
@@ -128,6 +147,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '512',
+       groups           => 'sysadmin',
      }
      user { 'mhernan7':
  			  ensure           => 'present',
@@ -138,6 +158,7 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '513',
+       groups           => 'sysadmin',
      }
      user { 'stevev':
  			  ensure           => 'present',
@@ -148,7 +169,8 @@ class sysusers {
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '514',
+       groups           => 'sysadmin',
      }
 
-     
+
 }
