@@ -9,20 +9,20 @@ class sysusers {
        shell            => '/bin/bash',
        uid              => '500',
      }
-     user { 'jbeder':
+     user { 'jbeder1':
  			  ensure           => 'present',
        gid              => '501',
-       home             => '/home/jbeder',
+       home             => '/home/jbeder1',
        password         => '*',
        password_max_age => '99999',
        password_min_age => '0',
        shell            => '/bin/bash',
        uid              => '501',
      }
-     user { 'mhagel':
+     user { 'mhagel2':
  			  ensure           => 'present',
        gid              => '502',
-       home             => '/home/mhagel',
+       home             => '/home/mhagel2',
        password         => '*',
        password_max_age => '99999',
        password_min_age => '0',
