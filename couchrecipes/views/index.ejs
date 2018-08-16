@@ -1,0 +1,29 @@
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+
+<!-- show recipes -->
+<h1>Recipes</h1>
+<ul>
+<% recipes.forEach(function(recipe){ %>
+    <li>
+        <h3><%= recipe.value.name %></h4>
+        <p><%= recipe.value.description %></p>
+
+        <h4>Ingredients</h4>
+        <ul>
+            <% recipe.value.ingredients.forEach(function(item){ %>
+                <li> <%= item.quantity %> <%= item.unit %> <%= item.name %> </li>
+            <% }); %>
+        </ul>
+
+        <h4>Directions</h4>
+        <ul>
+            <% recipe.value.directions.forEach(function(item){ %>
+                <li> <%= item %> </li>
+            <% }); %>
+        </ul>
+
+    </li>
+
+<% }); %>
+
+</ul>
