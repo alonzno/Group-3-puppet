@@ -1,1 +1,5 @@
-class { 'nodejs': }
+class { 'nodejs': 
+    Package { 'nodejs-legacy':
+        ensure => installed
+    }
+}
