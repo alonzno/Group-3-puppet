@@ -5,7 +5,7 @@ class webappstack {
     }
     package {
         "express":
-        ensure => installed,
+        ensure => present,
         provider => "npm",
     }
     
