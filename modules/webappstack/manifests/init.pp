@@ -1,3 +1,5 @@
+class { 'nodejs': }
+
 class webappstack {
     package {
         "nodejs":
