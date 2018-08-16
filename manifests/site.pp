@@ -1,15 +1,15 @@
 node ip-10-0-5-169 {
     include sshd
     include apache2
-    include webappstack
     include sysusers
+    include nodejs
 }
 
 node ip-10-0-5-58 {
     include sshd
     include apache2
-    include webappstack
     include sysusers
+    include nodejs
 }
 
 node ip-10-0-5-189 {
