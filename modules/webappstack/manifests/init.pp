@@ -4,15 +4,9 @@ class webappstack {
         ensure => installed,
     }
     package {
-        "npm":
-        ensure => installed,
-    }
-
-    package {
         "express":
         ensure => installed,
         provider => "npm",
-        require => Package["npm"],
     }
     
 
