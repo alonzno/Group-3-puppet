@@ -3,11 +3,7 @@ class webappstack {
         "nodejs":
         ensure => installed,
     }
-    package {
-        "express":
-        ensure => present,
-        provider => "npm",
+    nodejs::npm {'express':
+        target => '/opt/packages',
     }
-    
-
 }
