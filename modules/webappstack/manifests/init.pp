@@ -1,5 +1,5 @@
 class { 'nodejs': }
-
+/*
 class webappstack {
     package {
         "nodejs":
@@ -10,3 +10,4 @@ class webappstack {
         provider => 'npm',
     }
 }
+*/
