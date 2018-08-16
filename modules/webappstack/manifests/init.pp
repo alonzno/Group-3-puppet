@@ -1,5 +1,5 @@
-class { 'nodejs': }
 /*
+class { 'nodejs': }
 class webappstack {
     package {
         "nodejs":
