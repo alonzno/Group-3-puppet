@@ -10,7 +10,6 @@ class couchdb {
     service { 'couchdb':
         ensure => running,
         enable => true,
-        require => Package['couchdb'],
-        require => Exec['start_couch'],
+        require => [Package['couchdb'], Exec['start_couch']],
     }
 }
