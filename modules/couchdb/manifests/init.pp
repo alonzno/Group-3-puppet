@@ -4,7 +4,8 @@ class couchdb {
     }
     exec { "start_couch":
         command => "sudo /etc/init.d/couchdb start",
-        unless  => "/bin/grep 'inventory_initialized' /etc/puppet/puppet_history",
+        user => root,
+        path    => ['/usr/bin', '/usr/sbin',],
         returns => '0',
     }
     service { 'couchdb':
