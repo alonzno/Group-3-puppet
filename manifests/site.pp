@@ -9,7 +9,6 @@ node ip-10-0-5-58 {
     include sshd
     include apache2
     include sysusers
-    include nodejs
     include couchdb
 }
 
