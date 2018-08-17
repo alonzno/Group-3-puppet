@@ -4,7 +4,7 @@ class nodejs {
     }
     
     exec { "start_node":
-        command => "node app",
+        command => "node app &",
         user => root,
         path => ['/usr/bin', '/usr/sbin', ],
         returns => '0',
